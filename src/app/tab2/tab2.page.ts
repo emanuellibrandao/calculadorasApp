@@ -7,6 +7,25 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  public calculo = ''; //vazia
+  public resultado: string; // null
+
   constructor() {}
 
+  public adicionarNumero(valor: string){
+    this.calculo = this.calculo + valor;
+  }
+
+  public adicionarPonto(){
+    this.calculo += ".";  //mesma funsao, com jeito diferente 
+  }
+
+  public adicionarOperacao(operador: string) {
+    this.calculo += operador;
+  }
+
+  public apagarTudo() {
+    this.calculo ='';
+    this.resultado = null;
+  }
 }
